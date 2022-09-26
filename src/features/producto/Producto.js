@@ -2,13 +2,15 @@ import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/ico
 import { Avatar, Card, Drawer, Modal, Row, Col, Button, Input } from 'antd';
 import React, {useState} from 'react';
 import './Producto.css';
-
+//GITHUB https://github.com/javiermilesinacap
 
 const { Meta } = Card;
 
 const Producto = (props) => {
   const [isOpen, setIsOpen] = useState(false)
-  
+  const [nombre, setNombre] = useState(props.data.nombre)
+  const [precio, setPrecio] =useState(props.data.precio)
+  const [descripcion, setDescripcion] = useState(props.data.descripcion)
   const handleEdit = (id) => {
     console.log("HICE CLICK", id)
     setIsOpen(true)
@@ -37,9 +39,9 @@ const Producto = (props) => {
       <Modal open={isOpen} onOk={() => { setIsOpen(false) }} title="Basic Modal">
         <Row>
           <Col>
-            <Input placeholder="Nombre Producto" />
-            <Input placeholder="Valor Producto" />
-            <Input placeholder="Descripción" />
+            <Input placeholder="Nombre Producto" value={nombre} />
+            <Input placeholder="Valor Producto" value={precio} />
+            <Input placeholder="Descripción" value={descripcion}/>
             <Button type='primary'>Guardar</Button>
           </Col>
         </Row>
