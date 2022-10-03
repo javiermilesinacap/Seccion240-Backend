@@ -39,9 +39,9 @@ const Producto = (props) => {
       <Modal open={isOpen} onOk={() => { setIsOpen(false) }} title="Basic Modal">
         <Row>
           <Col>
-            <Input placeholder="Nombre Producto" value={nombre} />
-            <Input placeholder="Valor Producto" value={precio} />
-            <Input placeholder="Descripción" value={descripcion}/>
+            <Input placeholder="Nombre Producto" defaultValue={nombre} />
+            <Input placeholder="Valor Producto" defaultValue={precio} />
+            <Input placeholder="Descripción" defaultValue={descripcion}/>
             <Button type='primary'>Guardar</Button>
           </Col>
         </Row>
