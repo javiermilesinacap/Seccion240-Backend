@@ -8,10 +8,13 @@ const ProductoList = () => {
         {"id":"3", "nombre":"Jugo Naranja", "precio":"2200", "imagen": "3.jpg"},
         {"id":"4", "nombre":"Pack Lata", "precio":"3420", "imagen": "4.jpg"},
     ]
+    const modificaProducto = () => {
+        console.log(productos)
+    }
     return(
         <div>
         {productos.map((producto)=>{
-            return(<Producto data={producto} key={producto.id} />)
+            return(<Producto data={producto} key={producto.id} unbotonClick={modificaProducto} />)
             
         })}
         </div>

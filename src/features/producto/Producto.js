@@ -42,7 +42,7 @@ const Producto = (props) => {
             <Input placeholder="Nombre Producto" defaultValue={nombre} />
             <Input placeholder="Valor Producto" defaultValue={precio} />
             <Input placeholder="Descripción" defaultValue={descripcion}/>
-            <Button type='primary'>Guardar</Button>
+            <Button type='primary' onClick={props.unbotonClick}>Guardar</Button>
           </Col>
         </Row>
       </Modal>
