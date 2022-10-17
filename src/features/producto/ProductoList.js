@@ -17,7 +17,7 @@ const ProductoList = () => {
         console.log(productos)
     }
     return(
-        <div>
+        <div key="11">
         {productos.map((producto)=>{
             return(<Producto data={producto} key={producto.key} unbotonClick={modificaProducto} />)
             

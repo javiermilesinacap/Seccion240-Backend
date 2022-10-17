@@ -17,6 +17,7 @@ const Producto = (props) => {
   }
   return (
     <Card
+    key={props.data.key}
       style={{
         width: 300,
       }}
